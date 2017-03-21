@@ -1,6 +1,6 @@
 <?php
 
-class rex_vnews_news {
+class rex_vnews_news_author {
 
   static $users = array();
   private $user = array();
@@ -9,7 +9,7 @@ class rex_vnews_news {
 
   static function getTable()
   {
-    return 'vnews_article';
+    return 'vnews_author';
   }
 
   function __construct($user) {
