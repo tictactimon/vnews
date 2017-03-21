@@ -1,0 +1,14 @@
+navigation_vnews = vNews
+vnews_navi_title = Einstellungen
+vnews_module = Module
+vnews_manual = Erklärung
+vnews_changelog = Changelog
+vnews_main_title = Einstellungen
+vnews_title = vnews 04
+vnews_module_title = Module
+vvnews_erklaerung_title = Erklärung
+vnews_changelog_title = Changelog
+vnews_info = Module
+install_vnews_04_modul = Modul "0600 vnews Frontseite ausgeben" installieren
+install_modul = Module installieren
+install_modul_description = Dieses Modul wird benötigt, um die vnews auszugeben 

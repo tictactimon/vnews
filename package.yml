@@ -1,0 +1,31 @@
+package: vnews
+version: '0.1-beta'
+author: Timon Huber
+supportpage: www.vidyo.ch
+
+page:
+    title: 'Einstellungen'
+    perm: vnews[]
+    block: vnews
+    icon: rex-icon fa-bullhorn
+    subpages:
+        main:
+           title: 'vNews'
+           perm: 'admin[]'
+           subpages:
+                settings: { title: 'Einstellungen' }
+                manual: { title: 'Anleitung' }
+                changelog: { title: 'Changelog' }
+
+requires:
+    packages:
+        yform: '>=1.0-beta5'
+        yform/manager: '>=1.0-beta5'
+        mform: '>=5.0.0-beta-2'
+        media_manager: '>=2.0'		 		
+        redactor2: '>=2.0'
+        yrewrite: '>=2.2.0'
+        url: '1.0.0-beta4'		
+        phpmailer: '^2.0.1'
+    redaxo: '>=5.2.0'
+
