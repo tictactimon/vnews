@@ -69,23 +69,27 @@
     case 'links':
         $out .= '<div class="card medium">';
         $out .= '<div class="col-md-12">';
-        $out .=  '<p class="liste_titel">'.$linked_title_begin.$titel.$linked_title_end.'</p>';
+        $out .=  '<p class="vnews_titel_liste liste_titel">'.$linked_title_begin.$titel.$linked_title_end.'</p>';
         if("REX_VALUE[4]"){
-            $out .=  '<div class="card-content">'.$author.'</div>';
+            $out .=  '<div class="vnews_aut card-content">'.$author.'</div>';
         }
         if("REX_VALUE[5]"){
-            $out .=  '<div class="card-content">'.$category.'</div>';
+            $out .=  '<div class="vnews_cat card-content">'.$category.'</div>';
         }
         if("REX_VALUE[7]"){          
-            $out .=  '<div class="card-content">'.$date.$uhr.'</div>';
+            $out .=  '<div class="vnews_time card-content">'.$date.$uhr.'</div>';
         }
         $out .= '</div>';
         $out .= '<div class="col-md-4 col-sm-12">';
-        if("REX_VALUE[9]"){           
-            $out .=  '<img class="img-responsive" src="/media/'.$pic.'">';
+        if("REX_VALUE[9]"){ 
+			if(rex::isBackend()) {
+				$out .=  '<img class="img-responsive" src="index.php?rex_media_type=rex_mediabutton_preview&rex_media_file='.$pic.'">';
+			}else{
+            	$out .=  '<img class="img-responsive" src="/media/'.$pic.'">';
+			}
         }
         $out .= '</div>';
-        $out .= '<div class="card-content col-md-8 col-sm-12">';
+        $out .= '<div class="vnews_lead card-content col-md-8 col-sm-12">';
         if("REX_VALUE[6]"){
             $out .= $lead;
         }
@@ -99,21 +103,27 @@
     break;  
     case 'oben':
     $out .= '<div class="col-md-12 col-sm-12">';    
-    $out .=  '<p class="liste_titel">'.$linked_title_begin.$titel.$linked_title_end.'</p>';
+    $out .=  '<p class="vnews_titel_liste liste_titel">'.$linked_title_begin.$titel.$linked_title_end.'</p>';
     if("REX_VALUE[4]"){
-        $out .=  '<p>'.$author.'</p>';
+        $out .=  '<div class="vnews_aut card-content">'.$author.'</div>';
     }
     if("REX_VALUE[5]"){
-        $out .=  '<p>'.$category.'</p>';
+        $out .=  '<div class="vnews_cat card-content">'.$category.'</div>';
     }
     if("REX_VALUE[7]"){          
-        $out .=  '<p>'.$date.$uhr.'<p>';
+        $out .=  '<div class="vnews_time card-content">'.$date.$uhr.'</div>';
     }
-    if("REX_VALUE[9]"){           
+    if("REX_VALUE[9]"){
+		if(rex::isBackend()) {
+				$out .=  '<img class="img-responsive" src="index.php?rex_media_type=rex_mediabutton_preview&rex_media_file='.$pic.'">';
+			}else{
         $out .=  '<img class="img-responsive" src="/media/'.$pic.'">';
+		}
     }
     if("REX_VALUE[6]"){
+		$out .= '<div class="vnews_lead card-content col-md-8 col-sm-12">';
         $out .=  $lead;
+		$out .= '</div>';
     }          
     
     $out .= $linked_button;  
@@ -126,23 +136,27 @@
     
         $out .= '<div class="card medium">';
         $out .= '<div class="col-md-12">';
-        $out .=  '<p class="liste_titel">'.$linked_title_begin.$titel.$linked_title_end.'</p>';
+        $out .=  '<p class="vnews_titel_liste liste_titel">'.$linked_title_begin.$titel.$linked_title_end.'</p>';
         if("REX_VALUE[4]"){
-            $out .=  '<div class="card-content">'.$author.'</div>';
+            $out .=  '<div class="vnews_aut card-content">'.$author.'</div>';
         }
         if("REX_VALUE[5]"){
-            $out .=  '<div class="card-content">'.$category.'</div>';
+            $out .=  '<div class="vnews_cat card-content">'.$category.'</div>';
         }
         if("REX_VALUE[7]"){          
-            $out .=  '<div class="card-content">'.$date.$uhr.'</div>';
+            $out .=  '<div class="vnews_time card-content">'.$date.$uhr.'</div>';
         }
         $out .= '</div>';
         $out .= '<div class="col-sm-4 col-sm-push-8">';
-        if("REX_VALUE[9]"){           
+        if("REX_VALUE[9]"){
+			if(rex::isBackend()) {
+				$out .=  '<img class="img-responsive" src="index.php?rex_media_type=rex_mediabutton_preview&rex_media_file='.$pic.'">';
+			}else{
             $out .=  '<img class="img-responsive" src="/media/'.$pic.'">';
+			}
         }
         $out .= '</div>';
-        $out .= '<div class="card-content col-sm-8 col-sm-pull-4">';
+        $out .= '<div class="vnews_lead card-content col-sm-8 col-sm-pull-4">';
         if("REX_VALUE[6]"){
             $out .= $lead;
             $out .= $linked_button;

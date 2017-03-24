@@ -52,17 +52,17 @@
     {
     case 'oben':
         if("REX_VALUE[9]"){           
-            print '<div class="row"><div class="col-md-12"><img class="img-responsive" src="/media/'.$pic.'"></div></div>';
+            print '<div class="row"><div class="col-md-12"><img class="img-responsive vnews_detail_pic" src="/media/'.$pic.'"></div></div>';
         }    
     break;
     }
     
-    print '<div class="article '.$offset.' col-md-'.$spalte.' col-sm-'.$spaltesm.' col-xs-12">';
+    print '<div class="vnews_article article '.$offset.' col-md-'.$spalte.' col-sm-'.$spaltesm.' col-xs-12">';
     
-    print '<h1>'.$titel.'</h1>';
+    print '<h1 class="vnews_detail_titel">'.$titel.'</h1>';
     
     if("REX_VALUE[3]"){
-        print $lead;
+        print '<div class="vnews_detail_lead">'.$lead.'</div>';
     }
 
 
@@ -70,24 +70,24 @@
     {
     case 'unten':
     if("REX_VALUE[9]"){           
-        print '<div class="row"><div class="col-md-12"><img class="img-responsive" src="/media/'.$pic.'"></div></div>';
+        print '<div class="row"><div class="col-md-12"><img class="img-responsive vnews_detail_pic" src="/media/'.$pic.'"></div></div>';
     }    
     break;
     }
     
     if("REX_VALUE[4]"){
-    print '<p>'.$author.'</p>';
+    print '<p class="vnews_detail_author">'.$author.'</p>';
     }
 
     if("REX_VALUE[5]"){
-    print '<p>'.$category.'</p>';
+    print '<p class="vnews_detail_category">'.$category.'</p>';
     }
     
     if("REX_VALUE[7]"){
-        print '<p>'.$date.$uhr.'<p>';
+        print '<p class="vnews_detail_time">'.$date.$uhr.'<p>';
     }
     
-    print $text;
+    print '<div class="vnews_detail_text">'.$text.'</div>';
       
     print $out;
       
@@ -146,7 +146,7 @@ jQuery("#galleryREX_SLICE_ID").unitegallery({
         }/*If Backend Abfrage */
     }/*if REX_VALUE*/
   
-    print '<a class="btn btn-info btn-sm back" onclick="goBack()">Zurück</a>';
+    print '<a class="btn btn-info btn-sm vnews_back" onclick="goBack()">Zurück</a>';
     print '</div>';
 ?>
 
